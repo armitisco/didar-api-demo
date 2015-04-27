@@ -19,6 +19,7 @@ namespace DidarApiDemoWindowsForms
 			InitializeComponent();
 		}
 
+
 		private static string ToJson(object obj)
 		{
 			return new JavaScriptSerializer().Serialize(obj);

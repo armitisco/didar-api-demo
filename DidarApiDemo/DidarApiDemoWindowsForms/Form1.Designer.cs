@@ -166,6 +166,7 @@
 		private System.Windows.Forms.Button addContactButton;
 		private System.Windows.Forms.TextBox workPhoneTextBox;
 		private System.Windows.Forms.TextBox workPhoneExtensionTextBox;
+
 	}
 }
 
