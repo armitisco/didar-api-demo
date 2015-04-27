@@ -15,7 +15,7 @@ namespace DidarApiWrapper.me.didar {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetBizDomainData", Namespace="http://locopoc.com/")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetBizDomainData", Namespace="http://didar.me/")]
     [System.SerializableAttribute()]
     public partial class GetBizDomainData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -76,7 +76,7 @@ namespace DidarApiWrapper.me.didar {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CallResponse", Namespace="http://locopoc.com/")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CallResponse", Namespace="http://didar.me/")]
     [System.SerializableAttribute()]
     public partial class CallResponse : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -136,7 +136,7 @@ namespace DidarApiWrapper.me.didar {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="BizDomainData", Namespace="http://locopoc.com/")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BizDomainData", Namespace="http://didar.me/")]
     [System.SerializableAttribute()]
     public partial class BizDomainData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -241,7 +241,7 @@ namespace DidarApiWrapper.me.didar {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Status", Namespace="http://locopoc.com/")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Status", Namespace="http://didar.me/")]
     public enum Status : int {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
@@ -256,7 +256,7 @@ namespace DidarApiWrapper.me.didar {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetUsersData", Namespace="http://locopoc.com/")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetUsersData", Namespace="http://didar.me/")]
     [System.SerializableAttribute()]
     public partial class GetUsersData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -317,7 +317,7 @@ namespace DidarApiWrapper.me.didar {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="BizDomainUser", Namespace="http://locopoc.com/")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BizDomainUser", Namespace="http://didar.me/")]
     [System.SerializableAttribute()]
     public partial class BizDomainUser : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -440,7 +440,7 @@ namespace DidarApiWrapper.me.didar {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetContactsData", Namespace="http://locopoc.com/")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetContactsData", Namespace="http://didar.me/")]
     [System.SerializableAttribute()]
     public partial class GetContactsData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -501,7 +501,7 @@ namespace DidarApiWrapper.me.didar {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Contact", Namespace="http://locopoc.com/")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Contact", Namespace="http://didar.me/")]
     [System.SerializableAttribute()]
     public partial class Contact : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -764,29 +764,36 @@ namespace DidarApiWrapper.me.didar {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://locopoc.com/", ConfigurationName="me.didar.CollaborativeSoap")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://didar.me/", ConfigurationName="me.didar.CollaborativeSoap")]
     public interface CollaborativeSoap {
         
-        // CODEGEN: Generating message contract since element name apiKey from namespace http://locopoc.com/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://locopoc.com/GetBizDomain", ReplyAction="*")]
+        // CODEGEN: Generating message contract since element name apiKey from namespace http://didar.me/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://didar.me/GetBizDomain", ReplyAction="*")]
         DidarApiWrapper.me.didar.GetBizDomainResponse GetBizDomain(DidarApiWrapper.me.didar.GetBizDomainRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://locopoc.com/GetBizDomain", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://didar.me/GetBizDomain", ReplyAction="*")]
         System.Threading.Tasks.Task<DidarApiWrapper.me.didar.GetBizDomainResponse> GetBizDomainAsync(DidarApiWrapper.me.didar.GetBizDomainRequest request);
         
-        // CODEGEN: Generating message contract since element name apiKey from namespace http://locopoc.com/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://locopoc.com/GetUsers", ReplyAction="*")]
+        // CODEGEN: Generating message contract since element name apiKey from namespace http://didar.me/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://didar.me/GetUsers", ReplyAction="*")]
         DidarApiWrapper.me.didar.GetUsersResponse GetUsers(DidarApiWrapper.me.didar.GetUsersRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://locopoc.com/GetUsers", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://didar.me/GetUsers", ReplyAction="*")]
         System.Threading.Tasks.Task<DidarApiWrapper.me.didar.GetUsersResponse> GetUsersAsync(DidarApiWrapper.me.didar.GetUsersRequest request);
         
-        // CODEGEN: Generating message contract since element name apiKey from namespace http://locopoc.com/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://locopoc.com/GetContacts", ReplyAction="*")]
+        // CODEGEN: Generating message contract since element name apiKey from namespace http://didar.me/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://didar.me/GetContacts", ReplyAction="*")]
         DidarApiWrapper.me.didar.GetContactsResponse GetContacts(DidarApiWrapper.me.didar.GetContactsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://locopoc.com/GetContacts", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://didar.me/GetContacts", ReplyAction="*")]
         System.Threading.Tasks.Task<DidarApiWrapper.me.didar.GetContactsResponse> GetContactsAsync(DidarApiWrapper.me.didar.GetContactsRequest request);
+        
+        // CODEGEN: Generating message contract since element name apiKey from namespace http://didar.me/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://didar.me/AddContact", ReplyAction="*")]
+        DidarApiWrapper.me.didar.AddContactResponse AddContact(DidarApiWrapper.me.didar.AddContactRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://didar.me/AddContact", ReplyAction="*")]
+        System.Threading.Tasks.Task<DidarApiWrapper.me.didar.AddContactResponse> AddContactAsync(DidarApiWrapper.me.didar.AddContactRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -795,7 +802,7 @@ namespace DidarApiWrapper.me.didar {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetBizDomainRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetBizDomain", Namespace="http://locopoc.com/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetBizDomain", Namespace="http://didar.me/", Order=0)]
         public DidarApiWrapper.me.didar.GetBizDomainRequestBody Body;
         
         public GetBizDomainRequest() {
@@ -809,7 +816,7 @@ namespace DidarApiWrapper.me.didar {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://locopoc.com/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://didar.me/")]
     public partial class GetBizDomainRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
@@ -829,7 +836,7 @@ namespace DidarApiWrapper.me.didar {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetBizDomainResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetBizDomainResponse", Namespace="http://locopoc.com/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetBizDomainResponse", Namespace="http://didar.me/", Order=0)]
         public DidarApiWrapper.me.didar.GetBizDomainResponseBody Body;
         
         public GetBizDomainResponse() {
@@ -843,7 +850,7 @@ namespace DidarApiWrapper.me.didar {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://locopoc.com/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://didar.me/")]
     public partial class GetBizDomainResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
@@ -863,7 +870,7 @@ namespace DidarApiWrapper.me.didar {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetUsersRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetUsers", Namespace="http://locopoc.com/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetUsers", Namespace="http://didar.me/", Order=0)]
         public DidarApiWrapper.me.didar.GetUsersRequestBody Body;
         
         public GetUsersRequest() {
@@ -877,7 +884,7 @@ namespace DidarApiWrapper.me.didar {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://locopoc.com/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://didar.me/")]
     public partial class GetUsersRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
@@ -897,7 +904,7 @@ namespace DidarApiWrapper.me.didar {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetUsersResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetUsersResponse", Namespace="http://locopoc.com/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetUsersResponse", Namespace="http://didar.me/", Order=0)]
         public DidarApiWrapper.me.didar.GetUsersResponseBody Body;
         
         public GetUsersResponse() {
@@ -911,7 +918,7 @@ namespace DidarApiWrapper.me.didar {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://locopoc.com/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://didar.me/")]
     public partial class GetUsersResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
@@ -931,7 +938,7 @@ namespace DidarApiWrapper.me.didar {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetContactsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetContacts", Namespace="http://locopoc.com/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetContacts", Namespace="http://didar.me/", Order=0)]
         public DidarApiWrapper.me.didar.GetContactsRequestBody Body;
         
         public GetContactsRequest() {
@@ -945,7 +952,7 @@ namespace DidarApiWrapper.me.didar {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://locopoc.com/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://didar.me/")]
     public partial class GetContactsRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
@@ -969,7 +976,7 @@ namespace DidarApiWrapper.me.didar {
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetContactsResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetContactsResponse", Namespace="http://locopoc.com/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetContactsResponse", Namespace="http://didar.me/", Order=0)]
         public DidarApiWrapper.me.didar.GetContactsResponseBody Body;
         
         public GetContactsResponse() {
@@ -983,7 +990,7 @@ namespace DidarApiWrapper.me.didar {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://locopoc.com/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://didar.me/")]
     public partial class GetContactsResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
@@ -994,6 +1001,78 @@ namespace DidarApiWrapper.me.didar {
         
         public GetContactsResponseBody(DidarApiWrapper.me.didar.GetContactsData GetContactsResult) {
             this.GetContactsResult = GetContactsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddContactRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddContact", Namespace="http://didar.me/", Order=0)]
+        public DidarApiWrapper.me.didar.AddContactRequestBody Body;
+        
+        public AddContactRequest() {
+        }
+        
+        public AddContactRequest(DidarApiWrapper.me.didar.AddContactRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://didar.me/")]
+    public partial class AddContactRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string apiKey;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public DidarApiWrapper.me.didar.Contact contactData;
+        
+        public AddContactRequestBody() {
+        }
+        
+        public AddContactRequestBody(string apiKey, DidarApiWrapper.me.didar.Contact contactData) {
+            this.apiKey = apiKey;
+            this.contactData = contactData;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddContactResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddContactResponse", Namespace="http://didar.me/", Order=0)]
+        public DidarApiWrapper.me.didar.AddContactResponseBody Body;
+        
+        public AddContactResponse() {
+        }
+        
+        public AddContactResponse(DidarApiWrapper.me.didar.AddContactResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://didar.me/")]
+    public partial class AddContactResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public DidarApiWrapper.me.didar.GetContactsData AddContactResult;
+        
+        public AddContactResponseBody() {
+        }
+        
+        public AddContactResponseBody(DidarApiWrapper.me.didar.GetContactsData AddContactResult) {
+            this.AddContactResult = AddContactResult;
         }
     }
     
@@ -1099,6 +1178,33 @@ namespace DidarApiWrapper.me.didar {
             inValue.Body.apiKey = apiKey;
             inValue.Body.lastModifiedFrom = lastModifiedFrom;
             return ((DidarApiWrapper.me.didar.CollaborativeSoap)(this)).GetContactsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        DidarApiWrapper.me.didar.AddContactResponse DidarApiWrapper.me.didar.CollaborativeSoap.AddContact(DidarApiWrapper.me.didar.AddContactRequest request) {
+            return base.Channel.AddContact(request);
+        }
+        
+        public DidarApiWrapper.me.didar.GetContactsData AddContact(string apiKey, DidarApiWrapper.me.didar.Contact contactData) {
+            DidarApiWrapper.me.didar.AddContactRequest inValue = new DidarApiWrapper.me.didar.AddContactRequest();
+            inValue.Body = new DidarApiWrapper.me.didar.AddContactRequestBody();
+            inValue.Body.apiKey = apiKey;
+            inValue.Body.contactData = contactData;
+            DidarApiWrapper.me.didar.AddContactResponse retVal = ((DidarApiWrapper.me.didar.CollaborativeSoap)(this)).AddContact(inValue);
+            return retVal.Body.AddContactResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<DidarApiWrapper.me.didar.AddContactResponse> DidarApiWrapper.me.didar.CollaborativeSoap.AddContactAsync(DidarApiWrapper.me.didar.AddContactRequest request) {
+            return base.Channel.AddContactAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<DidarApiWrapper.me.didar.AddContactResponse> AddContactAsync(string apiKey, DidarApiWrapper.me.didar.Contact contactData) {
+            DidarApiWrapper.me.didar.AddContactRequest inValue = new DidarApiWrapper.me.didar.AddContactRequest();
+            inValue.Body = new DidarApiWrapper.me.didar.AddContactRequestBody();
+            inValue.Body.apiKey = apiKey;
+            inValue.Body.contactData = contactData;
+            return ((DidarApiWrapper.me.didar.CollaborativeSoap)(this)).AddContactAsync(inValue);
         }
     }
 }
