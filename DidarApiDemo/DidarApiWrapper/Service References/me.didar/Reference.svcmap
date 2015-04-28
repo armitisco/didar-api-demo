@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://didar.local/API/Collaborative.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://didar.me/API/Collaborative.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Collaborative1.wsdl" MetadataType="Wsdl" ID="ba388fd8-f5c5-403b-926f-ac86e5d46e96" SourceId="1" SourceUrl="http://didar.local/API/Collaborative.asmx?wsdl" />
-    <MetadataFile FileName="Collaborative1.disco" MetadataType="Disco" ID="76387f9c-f498-4582-8d47-7a3258eb6cef" SourceId="1" SourceUrl="http://didar.local/API/Collaborative.asmx?disco" />
+    <MetadataFile FileName="Collaborative.disco" MetadataType="Disco" ID="e18bd96f-a5d2-4fb1-91db-58a1a70565ba" SourceId="1" SourceUrl="http://didar.me/API/Collaborative.asmx?disco" />
+    <MetadataFile FileName="Collaborative.wsdl" MetadataType="Wsdl" ID="ffaf6815-c2fe-4c28-a730-3b84a2e88aa6" SourceId="1" SourceUrl="http://didar.me/API/Collaborative.asmx?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

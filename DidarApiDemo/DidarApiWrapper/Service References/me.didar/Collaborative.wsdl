@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://didar.me/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://didar.me/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://locopoc.com/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://locopoc.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
-    <s:schema elementFormDefault="qualified" targetNamespace="http://didar.me/">
+    <s:schema elementFormDefault="qualified" targetNamespace="http://locopoc.com/">
       <s:import namespace="http://microsoft.com/wsdl/types/" />
       <s:element name="GetBizDomain">
         <s:complexType>
@@ -125,21 +125,6 @@
           <s:element minOccurs="1" maxOccurs="1" name="LastModified" type="s:dateTime" />
         </s:sequence>
       </s:complexType>
-      <s:element name="AddContact">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="apiKey" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="contactData" type="tns:Contact" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="AddContactResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="AddContactResult" type="tns:GetContactsData" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
     </s:schema>
     <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
       <s:simpleType name="guid">
@@ -167,12 +152,6 @@
   <wsdl:message name="GetContactsSoapOut">
     <wsdl:part name="parameters" element="tns:GetContactsResponse" />
   </wsdl:message>
-  <wsdl:message name="AddContactSoapIn">
-    <wsdl:part name="parameters" element="tns:AddContact" />
-  </wsdl:message>
-  <wsdl:message name="AddContactSoapOut">
-    <wsdl:part name="parameters" element="tns:AddContactResponse" />
-  </wsdl:message>
   <wsdl:portType name="CollaborativeSoap">
     <wsdl:operation name="GetBizDomain">
       <wsdl:input message="tns:GetBizDomainSoapIn" />
@@ -186,15 +165,11 @@
       <wsdl:input message="tns:GetContactsSoapIn" />
       <wsdl:output message="tns:GetContactsSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="AddContact">
-      <wsdl:input message="tns:AddContactSoapIn" />
-      <wsdl:output message="tns:AddContactSoapOut" />
-    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="CollaborativeSoap" type="tns:CollaborativeSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetBizDomain">
-      <soap:operation soapAction="http://didar.me/GetBizDomain" style="document" />
+      <soap:operation soapAction="http://locopoc.com/GetBizDomain" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -203,7 +178,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetUsers">
-      <soap:operation soapAction="http://didar.me/GetUsers" style="document" />
+      <soap:operation soapAction="http://locopoc.com/GetUsers" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -212,16 +187,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetContacts">
-      <soap:operation soapAction="http://didar.me/GetContacts" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="AddContact">
-      <soap:operation soapAction="http://didar.me/AddContact" style="document" />
+      <soap:operation soapAction="http://locopoc.com/GetContacts" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -233,7 +199,7 @@
   <wsdl:binding name="CollaborativeSoap12" type="tns:CollaborativeSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetBizDomain">
-      <soap12:operation soapAction="http://didar.me/GetBizDomain" style="document" />
+      <soap12:operation soapAction="http://locopoc.com/GetBizDomain" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -242,7 +208,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetUsers">
-      <soap12:operation soapAction="http://didar.me/GetUsers" style="document" />
+      <soap12:operation soapAction="http://locopoc.com/GetUsers" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -251,16 +217,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetContacts">
-      <soap12:operation soapAction="http://didar.me/GetContacts" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="AddContact">
-      <soap12:operation soapAction="http://didar.me/AddContact" style="document" />
+      <soap12:operation soapAction="http://locopoc.com/GetContacts" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -271,10 +228,10 @@
   </wsdl:binding>
   <wsdl:service name="Collaborative">
     <wsdl:port name="CollaborativeSoap" binding="tns:CollaborativeSoap">
-      <soap:address location="http://didar.local/API/Collaborative.asmx" />
+      <soap:address location="http://didar.me/API/Collaborative.asmx" />
     </wsdl:port>
     <wsdl:port name="CollaborativeSoap12" binding="tns:CollaborativeSoap12">
-      <soap12:address location="http://didar.local/API/Collaborative.asmx" />
+      <soap12:address location="http://didar.me/API/Collaborative.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

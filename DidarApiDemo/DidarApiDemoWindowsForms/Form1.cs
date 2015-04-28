@@ -80,8 +80,21 @@ namespace DidarApiDemoWindowsForms
 
 		private async void GetContacts()
 		{
-			Contact[] data = await DidarApi.Wrapper.GetContactsData(apiKeyTextBox.Text, DateTime.Now.Date.AddDays(-10));
-			MessageBox.Show(ToJson(data));
+			DateTime lastModified = DateTime.Now.Date.AddYears(-10);
+			bool hasData = true;
+			int count = 0;
+			while (hasData)
+			{
+				Contact[] data = await DidarApi.Wrapper.GetContactsData(apiKeyTextBox.Text, lastModified);
+				MessageBox.Show(ToJson(data));
+				count += data.Length;
+				hasData = (data.Length > 0);
+				if (hasData)
+					lastModified = data.Max(r => r.LastModified).AddSeconds(1);
+				MessageBox.Show(count.ToString() + " " + lastModified);
+			}
+
+			MessageBox.Show("Finished. count: " + count);
 		}
 
 		private void addContactButton_Click(object sender, EventArgs e)
@@ -103,7 +116,7 @@ namespace DidarApiDemoWindowsForms
 			var user = users[rand.Next(users.Length)];
 
 			Contact contact = new Contact()
-			{ 
+			{
 				OwnerId = user.Id,
 				Title = titleTextBox.Text,
 				FirstName = firstNameTextBox.Text,
@@ -116,7 +129,7 @@ namespace DidarApiDemoWindowsForms
 			contact = await DidarApi.Wrapper.AddContact(apiKeyTextBox.Text, contact);
 
 			MessageBox.Show(ToJson(contact));
-			
+
 		}
 
 	}
