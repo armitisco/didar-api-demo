@@ -55,6 +55,9 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Service References\me.didar\Collaborative.wsdl" />
+    <None Include="Service References\me.didar\DidarApiWrapper.me.didar.AddContactResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\me.didar\DidarApiWrapper.me.didar.GetBizDomainData.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

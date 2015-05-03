@@ -50,15 +50,14 @@ namespace DidarApi
 
 		public static async Task<Contact> AddContact(string apiKey, Contact contactData)
 		{
-			throw new NotImplementedException();
-			//using (CollaborativeSoapClient client = new CollaborativeSoapClient())
-			//{
-			//	AddContactResponse response = await client.AddContactAsync(apiKey, contactData);
-			//	if (response.Body.AddContactResult.Response.StatusCode == Status.OK)
-			//		return response.Body.AddContactResult.Data[0];
-			//	else
-			//		throw new Exception("API error: " + response.Body.AddContactResult.Response.StatusCode);
-			//}
+			using (CollaborativeSoapClient client = new CollaborativeSoapClient())
+			{
+				AddContactResponse response = await client.AddContactAsync(apiKey, contactData);
+				if (response.Body.AddContactResult.Response.StatusCode == Status.OK)
+					return response.Body.AddContactResult.Data[0];
+				else
+					throw new Exception("API error: " + response.Body.AddContactResult.Response.StatusCode);
+			}
 		}
 	}
 }
