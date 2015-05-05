@@ -80,7 +80,7 @@ namespace DidarApiDemoWindowsForms
 
 		private async void GetContacts()
 		{
-			DateTime lastModified = DateTime.Now.Date.AddYears(-10);
+			DateTime lastModified =  DateTime.Now.Date.AddYears(-10);
 			bool hasData = true;
 			int count = 0;
 			while (hasData)
@@ -91,7 +91,8 @@ namespace DidarApiDemoWindowsForms
 				hasData = (data.Length > 0);
 				if (hasData)
 					lastModified = data.Max(r => r.LastModified).AddSeconds(1);
-				MessageBox.Show(count.ToString() + " " + lastModified);
+				if (MessageBox.Show(count.ToString() + " " + lastModified, "Continue?", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.Cancel)
+					break;
 			}
 
 			MessageBox.Show("Finished. count: " + count);
