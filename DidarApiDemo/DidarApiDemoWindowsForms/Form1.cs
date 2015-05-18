@@ -124,7 +124,8 @@ namespace DidarApiDemoWindowsForms
 				LastName = lastNameTextBox.Text,
 				MobilePhone = mobilePhoneTextBox.Text,
 				WorkPhone = workPhoneTextBox.Text,
-				WorkPhoneExtension = workPhoneExtensionTextBox.Text
+				WorkPhoneExtension = workPhoneExtensionTextBox.Text,
+				Note = noteTextBox.Text
 			};
 
 			contact = await DidarApi.Wrapper.AddContact(apiKeyTextBox.Text, contact);

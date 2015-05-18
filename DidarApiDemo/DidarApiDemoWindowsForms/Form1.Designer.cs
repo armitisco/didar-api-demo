@@ -39,6 +39,7 @@
 			this.addContactButton = new System.Windows.Forms.Button();
 			this.workPhoneTextBox = new System.Windows.Forms.TextBox();
 			this.workPhoneExtensionTextBox = new System.Windows.Forms.TextBox();
+			this.noteTextBox = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
 			// apiKeyTextBox
@@ -108,7 +109,7 @@
 			// 
 			// addContactButton
 			// 
-			this.addContactButton.Location = new System.Drawing.Point(12, 176);
+			this.addContactButton.Location = new System.Drawing.Point(12, 231);
 			this.addContactButton.Name = "addContactButton";
 			this.addContactButton.Size = new System.Drawing.Size(280, 23);
 			this.addContactButton.TabIndex = 8;
@@ -130,11 +131,20 @@
 			this.workPhoneExtensionTextBox.Size = new System.Drawing.Size(47, 20);
 			this.workPhoneExtensionTextBox.TabIndex = 10;
 			// 
+			// noteTextBox
+			// 
+			this.noteTextBox.Location = new System.Drawing.Point(12, 177);
+			this.noteTextBox.Multiline = true;
+			this.noteTextBox.Name = "noteTextBox";
+			this.noteTextBox.Size = new System.Drawing.Size(272, 48);
+			this.noteTextBox.TabIndex = 11;
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(304, 266);
+			this.Controls.Add(this.noteTextBox);
 			this.Controls.Add(this.workPhoneExtensionTextBox);
 			this.Controls.Add(this.workPhoneTextBox);
 			this.Controls.Add(this.addContactButton);
@@ -166,6 +176,7 @@
 		private System.Windows.Forms.Button addContactButton;
 		private System.Windows.Forms.TextBox workPhoneTextBox;
 		private System.Windows.Forms.TextBox workPhoneExtensionTextBox;
+		private System.Windows.Forms.TextBox noteTextBox;
 
 	}
 }

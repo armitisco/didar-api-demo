@@ -548,6 +548,9 @@ namespace DidarApiWrapper.me.didar {
         
         private System.DateTime LastModifiedField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NoteField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -749,6 +752,19 @@ namespace DidarApiWrapper.me.didar {
                 if ((this.LastModifiedField.Equals(value) != true)) {
                     this.LastModifiedField = value;
                     this.RaisePropertyChanged("LastModified");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=15)]
+        public string Note {
+            get {
+                return this.NoteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NoteField, value) != true)) {
+                    this.NoteField = value;
+                    this.RaisePropertyChanged("Note");
                 }
             }
         }

@@ -123,6 +123,7 @@
           <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" type="s:boolean" />
           <s:element minOccurs="1" maxOccurs="1" name="IsVIP" type="s:boolean" />
           <s:element minOccurs="1" maxOccurs="1" name="LastModified" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Note" type="s:string" />
         </s:sequence>
       </s:complexType>
       <s:element name="AddContact">
