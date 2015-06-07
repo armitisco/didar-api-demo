@@ -22,8 +22,8 @@
     <MetadataSource Address="http://didar.me/API/Collaborative.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Collaborative.disco" MetadataType="Disco" ID="3fa4074a-fc43-43e7-ae73-c2270ae99cdd" SourceId="1" SourceUrl="http://didar.me/API/Collaborative.asmx?disco" />
-    <MetadataFile FileName="Collaborative.wsdl" MetadataType="Wsdl" ID="54e5b190-c52a-4e7e-9bb3-c0dcae488c87" SourceId="1" SourceUrl="http://didar.me/API/Collaborative.asmx?wsdl" />
+    <MetadataFile FileName="Collaborative.disco" MetadataType="Disco" ID="dfa4c6db-38e1-4aed-9dc3-dc6c56479254" SourceId="1" SourceUrl="http://didar.me/API/Collaborative.asmx?disco" />
+    <MetadataFile FileName="Collaborative.wsdl" MetadataType="Wsdl" ID="f9f7ef8b-96ac-40ac-9389-7a2905c6716c" SourceId="1" SourceUrl="http://didar.me/API/Collaborative.asmx?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

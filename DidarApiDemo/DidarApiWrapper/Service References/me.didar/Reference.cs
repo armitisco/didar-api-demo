@@ -551,6 +551,9 @@ namespace DidarApiWrapper.me.didar {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NoteField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private DidarApiWrapper.me.didar.ArrayOfString OtherPhonesField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -769,6 +772,19 @@ namespace DidarApiWrapper.me.didar {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=16)]
+        public DidarApiWrapper.me.didar.ArrayOfString OtherPhones {
+            get {
+                return this.OtherPhonesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OtherPhonesField, value) != true)) {
+                    this.OtherPhonesField = value;
+                    this.RaisePropertyChanged("OtherPhones");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -777,6 +793,13 @@ namespace DidarApiWrapper.me.didar {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ArrayOfString", Namespace="http://didar.me/", ItemName="string")]
+    [System.SerializableAttribute()]
+    public class ArrayOfString : System.Collections.Generic.List<string> {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
