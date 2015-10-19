@@ -53,8 +53,10 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="Service References\me.didar\Collaborative.wsdl" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\me.didar\Collaborative1.wsdl" />
     <None Include="Service References\me.didar\DidarApiWrapper.me.didar.AddContactResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -93,7 +95,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\me.didar\Collaborative.disco" />
+    <None Include="Service References\me.didar\Collaborative1.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

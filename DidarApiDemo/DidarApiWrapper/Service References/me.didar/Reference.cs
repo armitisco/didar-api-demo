@@ -546,6 +546,9 @@ namespace DidarApiWrapper.me.didar {
         
         private bool IsVIPField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ContactStatusField;
+        
         private System.DateTime LastModifiedField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -746,7 +749,20 @@ namespace DidarApiWrapper.me.didar {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=14)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=14)]
+        public string ContactStatus {
+            get {
+                return this.ContactStatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContactStatusField, value) != true)) {
+                    this.ContactStatusField = value;
+                    this.RaisePropertyChanged("ContactStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=15)]
         public System.DateTime LastModified {
             get {
                 return this.LastModifiedField;
@@ -759,7 +775,7 @@ namespace DidarApiWrapper.me.didar {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=15)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=16)]
         public string Note {
             get {
                 return this.NoteField;
@@ -772,7 +788,7 @@ namespace DidarApiWrapper.me.didar {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=16)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=17)]
         public DidarApiWrapper.me.didar.ArrayOfString OtherPhones {
             get {
                 return this.OtherPhonesField;
