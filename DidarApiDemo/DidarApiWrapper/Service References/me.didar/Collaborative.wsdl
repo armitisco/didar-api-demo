@@ -279,10 +279,10 @@
   </wsdl:binding>
   <wsdl:service name="Collaborative">
     <wsdl:port name="CollaborativeSoap" binding="tns:CollaborativeSoap">
-      <soap:address location="http://responsive.didar.local/API/Collaborative.asmx" />
+      <soap:address location="http://didar.me/API/Collaborative.asmx" />
     </wsdl:port>
     <wsdl:port name="CollaborativeSoap12" binding="tns:CollaborativeSoap12">
-      <soap12:address location="http://responsive.didar.local/API/Collaborative.asmx" />
+      <soap12:address location="http://didar.me/API/Collaborative.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
