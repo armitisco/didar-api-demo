@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DidarApiWrapper", "DidarApi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DidarApiDemoWindowsForms", "DidarApiDemoWindowsForms\DidarApiDemoWindowsForms.csproj", "{F1C43D64-E435-48E9-917C-4C0853542D0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DidarApiWrapperV2", "DidarApiWrapperV2\DidarApiWrapperV2.csproj", "{4459DA85-E0C1-4C2A-BBC2-3241B2848F92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F1C43D64-E435-48E9-917C-4C0853542D0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1C43D64-E435-48E9-917C-4C0853542D0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1C43D64-E435-48E9-917C-4C0853542D0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4459DA85-E0C1-4C2A-BBC2-3241B2848F92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4459DA85-E0C1-4C2A-BBC2-3241B2848F92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4459DA85-E0C1-4C2A-BBC2-3241B2848F92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4459DA85-E0C1-4C2A-BBC2-3241B2848F92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

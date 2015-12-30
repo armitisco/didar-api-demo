@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DidarApiWrapper.me.didar;
 using System.Web.Script.Serialization;
+using DidarApiWrapperV2.me.didar;
+using DidarApiWrapperV2;
 
 namespace DidarApiDemoWindowsForms
 {
@@ -66,26 +67,26 @@ namespace DidarApiDemoWindowsForms
 			}
 		}
 
-		private async void GetBizDomainData()
+		private  void GetBizDomainData()
 		{
-			BizDomainData data = await DidarApi.Wrapper.GetBizDomainData(apiKeyTextBox.Text);
+			BizDomainData data = Wrapper.GetBizDomainData(apiKeyTextBox.Text);
 			MessageBox.Show(ToJson(data));
 		}
 
-		private async void GetUsers()
+		private  void GetUsers()
 		{
-			BizDomainUser[] data = await DidarApi.Wrapper.GetUsersData(apiKeyTextBox.Text);
+			BizDomainUser[] data = Wrapper.GetUsersData(apiKeyTextBox.Text);
 			MessageBox.Show(ToJson(data));
 		}
 
-		private async void GetContacts()
+		private  void GetContacts()
 		{
 			DateTime lastModified =  DateTime.Now.Date.AddYears(-10);
 			bool hasData = true;
 			int count = 0;
 			while (hasData)
 			{
-				Contact[] data = await DidarApi.Wrapper.GetContactsData(apiKeyTextBox.Text, lastModified);
+				Contact[] data = Wrapper.GetContactsData(apiKeyTextBox.Text, lastModified);
 				MessageBox.Show(ToJson(data));
 				count += data.Length;
 				hasData = (data.Length > 0);
@@ -110,9 +111,9 @@ namespace DidarApiDemoWindowsForms
 			}
 		}
 
-		private async void AddContact()
+		private  void AddContact()
 		{
-			BizDomainUser[] users = await DidarApi.Wrapper.GetUsersData(apiKeyTextBox.Text);
+			BizDomainUser[] users = Wrapper.GetUsersData(apiKeyTextBox.Text);
 			var rand = new Random();
 			var user = users[rand.Next(users.Length)];
 
@@ -128,7 +129,7 @@ namespace DidarApiDemoWindowsForms
 				Note = noteTextBox.Text
 			};
 
-			contact = await DidarApi.Wrapper.AddContact(apiKeyTextBox.Text, contact);
+			contact = Wrapper.AddContact(apiKeyTextBox.Text, contact);
 
 			MessageBox.Show(ToJson(contact));
 

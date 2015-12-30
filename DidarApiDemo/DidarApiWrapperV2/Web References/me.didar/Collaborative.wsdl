@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://didar.me/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://didar.me/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://didar.me/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GetBizDomain">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="apiKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBizDomainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBizDomainResult" type="tns:GetBizDomainData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetBizDomainData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Response" type="tns:CallResponse" />
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="tns:BizDomainData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CallResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="StatusCode" type="tns:Status" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Status">
+        <s:restriction base="s:string">
+          <s:enumeration value="OK" />
+          <s:enumeration value="UnknownError" />
+          <s:enumeration value="InvalidApiKey" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="BizDomainData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="OwnerId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CurrenCredit" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUsers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="apiKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUsersResult" type="tns:GetUsersData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetUsersData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Response" type="tns:CallResponse" />
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="tns:ArrayOfBizDomainUser" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfBizDomainUser">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BizDomainUser" nillable="true" type="tns:BizDomainUser" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BizDomainUser">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetContacts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="apiKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="lastModifiedFrom" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContactsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetContactsResult" type="tns:GetContactsData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetContactsData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Response" type="tns:CallResponse" />
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="tns:ArrayOfContact" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfContact">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Contact" nillable="true" type="tns:Contact" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Contact">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="OwnerId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Position" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MobilePhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WorkPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WorkPhoneExtension" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsVIP" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactStatus" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastModified" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Note" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OtherPhones" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddContact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="apiKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contactData" type="tns:Contact" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddContactResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddContactResult" type="tns:GetContactsData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetBizDomainSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBizDomain" />
+  </wsdl:message>
+  <wsdl:message name="GetBizDomainSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBizDomainResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetContactsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetContacts" />
+  </wsdl:message>
+  <wsdl:message name="GetContactsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddContactSoapIn">
+    <wsdl:part name="parameters" element="tns:AddContact" />
+  </wsdl:message>
+  <wsdl:message name="AddContactSoapOut">
+    <wsdl:part name="parameters" element="tns:AddContactResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CollaborativeSoap">
+    <wsdl:operation name="GetBizDomain">
+      <wsdl:input message="tns:GetBizDomainSoapIn" />
+      <wsdl:output message="tns:GetBizDomainSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input message="tns:GetUsersSoapIn" />
+      <wsdl:output message="tns:GetUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContacts">
+      <wsdl:input message="tns:GetContactsSoapIn" />
+      <wsdl:output message="tns:GetContactsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddContact">
+      <wsdl:input message="tns:AddContactSoapIn" />
+      <wsdl:output message="tns:AddContactSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CollaborativeSoap" type="tns:CollaborativeSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBizDomain">
+      <soap:operation soapAction="http://didar.me/GetBizDomain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://didar.me/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContacts">
+      <soap:operation soapAction="http://didar.me/GetContacts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddContact">
+      <soap:operation soapAction="http://didar.me/AddContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CollaborativeSoap12" type="tns:CollaborativeSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBizDomain">
+      <soap12:operation soapAction="http://didar.me/GetBizDomain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap12:operation soapAction="http://didar.me/GetUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContacts">
+      <soap12:operation soapAction="http://didar.me/GetContacts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddContact">
+      <soap12:operation soapAction="http://didar.me/AddContact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Collaborative">
+    <wsdl:port name="CollaborativeSoap" binding="tns:CollaborativeSoap">
+      <soap:address location="http://didar.me/API/Collaborative.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CollaborativeSoap12" binding="tns:CollaborativeSoap12">
+      <soap12:address location="http://didar.me/API/Collaborative.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

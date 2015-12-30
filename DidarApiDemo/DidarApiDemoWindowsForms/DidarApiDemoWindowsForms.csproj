@@ -80,9 +80,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DidarApiWrapper\DidarApiWrapper.csproj">
-      <Project>{5b080f9e-0f4d-4b88-af78-89178774234f}</Project>
-      <Name>DidarApiWrapper</Name>
+    <ProjectReference Include="..\DidarApiWrapperV2\DidarApiWrapperV2.csproj">
+      <Project>{4459da85-e0c1-4c2a-bbc2-3241b2848f92}</Project>
+      <Name>DidarApiWrapperV2</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
